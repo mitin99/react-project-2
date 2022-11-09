@@ -205,8 +205,6 @@ export function _saveQuestionAnswer ({ authedUser, qid, answer }) {
           }
         }
       }
-//im going to send the answer object back to try to sort out why I get the answer/post action first
-//this really should not matter once I test the app using proper UI rather than dipatching from index.js
       res({authedUser, qid, answer})
     }, 500)
   })

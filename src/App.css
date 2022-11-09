@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 75px auto 50px; 
 }
 
 .App-logo {
@@ -35,4 +38,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.footer {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4
 }

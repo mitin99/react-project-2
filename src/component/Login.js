@@ -21,7 +21,8 @@ function Login() {
         setUser(e.target.value)
     }
 
-    return (<>
+    return (
+    <>
         {
             !login &&
             <form className='login' onSubmit={handleLogin}>
