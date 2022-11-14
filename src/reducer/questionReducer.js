@@ -7,15 +7,15 @@ export default function reducer(state = {}, action) {
         case 'question/questionsReceived': {
             return action.payload
         }
-        case 'question/questionAdded': {
+        case 'questions/questionAdded': {
             return produce(state, (newState) => {
                 newState[action.payload.id] = action.payload
             })
         }
-        case 'question/questionAnswered':{
-            const {user, questionId, answer } = action.payload
+        case 'questions/questionAnswered':{
+            const {authedUser, qid, answer } = action.payload
             return produce(state, (newState) => {
-                newState[questionId][answer].votes.push(user)
+                newState[qid][answer].votes.push(authedUser)
             })
         }
         default:
@@ -24,7 +24,7 @@ export default function reducer(state = {}, action) {
 }
 
 const selector = (state) => {
-    return state.questions
+    return state.question
 }
 export const questionsIds = createSelector([selector],
     (questions) => {
@@ -32,8 +32,4 @@ export const questionsIds = createSelector([selector],
         const sortByTime = idList.sort((a,b) => questions[b].timestamp - questions[a].timestamp)
         return sortByTime
     }
-
 )
-
-
-// export const isQuestionAnswered = createSelector()

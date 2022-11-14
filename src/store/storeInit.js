@@ -16,8 +16,8 @@ const storeInit = () => {
     }))
     store.dispatch(apiInit({
         method: '_saveQuestion',
-        data: { optionOneText: "I believe in fate", optionTwoText: "I dont believe in fate", author:'helenfoneing'},
-        successActionList: ['question/questionAdded','user/questionAdded'],
+        data: { optionOneText: "Can fly", optionTwoText: "Can breath under water", author:'helenfoneing'},
+        successActionList: ['questions/questionAdded','users/questionAdded'],
         error: 'reject'
     }))
 }

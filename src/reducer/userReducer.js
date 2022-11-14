@@ -6,16 +6,16 @@ export default function reducer(state={}, action){
         case 'user/userAdded':
             return action.payload
 
-        case 'user/questionAdded': {
+        case 'users/questionAdded': {
             const {author, id} = action.payload
             return produce(state, (newState => {
                 newState[author].questions.push(id)
             })) 
         }
-        case 'user/answerd': {
-            const {user, questionId, answer} = action.payload
+        case 'users/questionAnswered': {
+            const {authedUser, qid, answer} = action.payload
             return produce(state, (newState => {
-                newState[user].answers[questionId]=answer
+                newState[authedUser].answers[qid]=answer
             }))
         }
         default:
@@ -27,7 +27,7 @@ const selector = (state) => {
     return state.user
 }
 
-export const leaderboardList = createSelector([selector],
+export const rankboardList = createSelector([selector],
     (user) => {
         const userList = Object.values(user)
         const sortScore = userList.sort((a,b) => {

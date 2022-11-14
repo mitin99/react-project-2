@@ -4,7 +4,7 @@ let users = {
   sarahedo: {
     id: 'sarahedo',
     name: 'Sarah Edo',
-    avatarURL:"https://avatars.dicebear.com/api/female/sarahedo.svg" ,
+    avatarURL:"https://avatars.dicebear.com/api/adventurer/vietnam.svg" ,
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -16,7 +16,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: "https://avatars.dicebear.com/api/male/tylermcginnis.svg",
+    avatarURL: "https://avatars.dicebear.com/api/big-smile/tien%20.svg",
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -26,7 +26,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: "https://avatars.dicebear.com/api/male/johndoe.svg",
+    avatarURL: "https://avatars.dicebear.com/api/big-ears/Zoom.svg",
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -37,7 +37,7 @@ let users = {
   helenfoneing: {
     id: 'helenfoneing',
     name: 'Helen Foneing',
-    avatarURL: "https://avatars.dicebear.com/api/female/helenfoening.svg",
+    avatarURL: "https://avatars.dicebear.com/api/pixel-art/thanh%20ha.svg",
     answers: {},
     questions: [],
   }

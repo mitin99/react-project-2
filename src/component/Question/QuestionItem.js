@@ -22,8 +22,8 @@ function QuestionItem({ optionOneText, optionTwoText, optionOneVotesCount, optio
                     {option === "optionOne" && optionDiv}
                 </li>
                 <li className={option2Class}>
-                    {optionTwoText} voted {optionOneVotesCount} times
-                    <span className="percentage"> {votePercentage(voteNumber, optionOneVotesCount)}%</span>
+                    {optionTwoText} voted {optionTwoVotesCount} times
+                    <span className="percentage"> {votePercentage(voteNumber, optionTwoVotesCount)}%</span>
                     {option === "optionTwo" && optionDiv}
                 </li>
             </ul>

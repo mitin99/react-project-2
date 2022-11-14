@@ -8,12 +8,12 @@ const api = store => next => async action => {
     if (action.type !== 'api/init') return next(action)
     next(action)
     const { dispatch } = store
-    const {method, data, error} = action.payload; let successActionList = action.payload
+    const {method, data, error} = action.payload; let { successActionList } = action.payload
     if (typeof (successActionList) === 'string') successActionList=[successActionList]
 
     try {
         const res = await backendApi[method](data)
-        successActionList.array.forEach(element => {
+        successActionList.forEach(element => {
             dispatch({type:element, payload: res})
         });
     } catch(err) {

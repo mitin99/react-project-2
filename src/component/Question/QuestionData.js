@@ -1,18 +1,19 @@
 import React from 'react'
 import QuestionItem from "./QuestionItem"
 import { useSelector } from 'react-redux'
+import Poll from './Poll'
 
-function QuestionData({questionId}) {
+function QuestionData({id}) {
     const questionState = (state) => {
-        const isAnswered = state.users[state.login].answers[questionId] !== undefined ? true : false
+        const isAnswered = state.user[state.login].answers[id] !== undefined ? true : false
         return isAnswered
     }
-    const questionSelector = useSelector(questionState)
-    const questionObj = useSelector(state => state.questions[questionId])
+    const isQuestionAnswered = useSelector(questionState)
+    const questionObj = useSelector(state => state.question[id])
 
     const {optionOne, optionTwo, author} = questionObj
-    const authorObj = useSelector(state => state.users[author])
-    const option = useSelector(state => state.users[state.login].answers[questionId])
+    const authorObj = useSelector(state => state.user[author])
+    const option = useSelector(state => state.user[state.login].answers[id])
 
     const { avatarURL, name } = authorObj
     const { votes: optionOneVotes, text: optionOneText } = optionOne
@@ -20,8 +21,8 @@ function QuestionData({questionId}) {
     const optionOneVotesCount = optionOneVotes.length
     const optionTwoVotesCount = optionTwoVotes.length
 
-    const props = {optionOneText, optionTwoText, optionOneVotesCount, optionTwoVotesCount, avatarURL, option, name}
-  return questionSelector ? <QuestionItem {...props}></QuestionItem> : ""
+    const props = {optionOneText, optionTwoText, optionOneVotesCount, optionTwoVotesCount, avatarURL, option, name, id, author}
+  return isQuestionAnswered ? <QuestionItem {...props}></QuestionItem> : <Poll {...props}></Poll>
 }
 
 export default QuestionData

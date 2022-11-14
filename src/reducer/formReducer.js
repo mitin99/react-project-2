@@ -3,7 +3,7 @@ const reducer = (state=false, action) =>{
         case 'form/formSubmitted':{
             return true
         }
-        case 'form/formReset':{
+        case 'form/reset':{
             return false
         }
         default:

@@ -5,7 +5,7 @@ import { useHistory } from 'react-router'
 function UserInfo() {
     const history = useHistory()
     const authState = (state) => {
-        return state.users[state.login]
+        return state.user[state.login]
     }
     const loginUser = useSelector(authState)
     const dispatch = useDispatch()
@@ -18,13 +18,13 @@ function UserInfo() {
     {
         loginUser && 
         <div className='user-name'>
-            Signed in as: {loginUser && loginUser.name}
+            Hello, {loginUser && loginUser.name}
             <button className='logout-button' onClick={handleClick}>Logout</button>
         </div>
     }
     {
         !loginUser && 
-        <div>Not logged in</div>
+        <div>Please sign in to play :)</div>
     }
     </>
   )

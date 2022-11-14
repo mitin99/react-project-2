@@ -1,3 +1,25 @@
+# Introduction
+This is "Would you rather?", a small project for Udacity React Nanodegree Program.
+In this game, you can:
+-Choose user to login
+-Choose between 2 answers
+-Create your own question
+-See the result of yours and other people's votes
+-Climb the leaderboard by create and answer as much questions as possible
+
+# Install
+Require Node version > 14, npm.
+Go to root folder, open cmd and type "npm install" to install dependencies.
+
+# Run the app
+After install all the dependencies, type "npm start", wait for the project to built.
+After that, the brower usually automatically opens the app for us. If not, go to browser and type "localhost:3000"
+Enjoy the show :D
+
+
+
+
+********************************************************************************************************
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
